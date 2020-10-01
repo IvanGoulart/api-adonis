@@ -61,7 +61,7 @@ class ForgotPasswordController {
     } catch (err) {
       return response
         .status(err.status)
-        .send({ error: { message: "Algo deu errado ao resetar sua senha" } });
+        .send({ error: { message: err.message } });
     }
   }
 }
